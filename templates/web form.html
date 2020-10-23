@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Корпус
+{% endblock %}
+{% block body%}
+
+    <div class="container mt-5">
+    <body class="text-center">
+    <h1 class="h3 mb-3 font-weight-normal"><b>Корпус стихов М. Круга и С. Есенина</b></h1>
+
+
+            <h4> Как написать запрос:</h4>
+            <ul class="text-left">
+            <li>для нахождения точной формы напишите слово в кавычках, например <i>"мамой"</i></li>
+            <li>для нахождения предложений с любой формой слова просто введите слово</li>
+            <li>для уточнения части речи напишите слово и часть речи через "+", например, если вы хотите найти
+                сущесвительное <i>дорогой</i>, напишите <i>дорогой+S</i> для поиска любых форм или <i>"дорогой"+S</i>
+            для поиска точной формы</li>
+            <li>для нахождения предложений с любым словом определенной части речи напишите ее граммему</li>
+                <li>для поиска биграмм и триграмм введите токены через пробел</li>
+            </ul>
+
+        <form action="/" method="post">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" name="to search" class = "form-control" placeholder="Введите запрос" required>
+        <button class="btn btn-success" type="submit">Искать</button>
+        </form>
+
+    Доступные граммемы:
+        <table border="1">
+    <tr><td>A</td><td>прилагательное</td></tr>
+        <tr><td>ADV</td><td>наречие</td></tr>
+        <tr><td> ADVPRO</td><td>местоименное наречие</td></tr>
+        <tr><td>ANUM</td><td>числительное-прилагательное</td></tr>
+        <tr><td>APRO</td><td>местоимение-прилагательное</td></tr>
+        <tr><td>COM</td><td>часть сложного слова</td></tr>
+        <tr><td>CONJ</td><td>союз</td></tr>
+        <tr><td>INTJ</td><td>междометие</td></tr>
+        <tr><td>NUM</td><td>числительное</td></tr>
+        <tr><td>PART</td><td>частица</td></tr>
+        <tr><td>PR</td><td>предлог</td></tr>
+        <tr><td>S</td><td>существительное</td></tr>
+        <tr><td>SPRO</td><td>местоимение-существительное</td></tr>
+        <tr><td>V</td><td>глагол</td>
+    </tr>
+    </table>
+
+    </body>
+    </div>
+{% endblock %}
+
+

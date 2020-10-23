@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Результаты
+{% endblock %}
+{% block body%}
+<div class="container mt-5">
+<h1>Результаты поиска</h1>
+    <h5> Найдено {{count}} вхождений</h5>
+{% for el in results %}
+
+        <p>{{ el.id }}. {{ el.Sentence }} <small>[{{ el.Author }}]</small></p>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
